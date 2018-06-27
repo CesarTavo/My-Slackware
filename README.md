@@ -77,10 +77,9 @@ I uncomment the first but you can
 uncomment what you want.
 
 
+## Sbopkg and Libreoffice
 
 - Install **snopkg** check their page [sbopkg.org](https://sbopkg.org/downloads.php)
-
-## Sbopkg and Libreoffice
 
 And example to install with sbopkg
 
