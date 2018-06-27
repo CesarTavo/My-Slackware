@@ -79,7 +79,7 @@ uncomment what you want.
 
 ## Sbopkg and Libreoffice
 
-- Install **snopkg** check their page [sbopkg.org](https://sbopkg.org/downloads.php)
+- To install **snopkg** check their page [sbopkg.org](https://sbopkg.org/downloads.php)
 
 And example to install with sbopkg
 
@@ -117,7 +117,6 @@ And for 32 bits.
 ```bash
 installpkg /tmp/libreoffice-helppack-4.2.3_es-i586-1_SBo.tgz
 installpkg /tmp/libreoffice-langpack-4.2.3_es-i586-1_SBo.tgz
-r
 ```
 
 - To install Mannually some stuff from slackbuilds you have to download the 
