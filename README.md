@@ -55,13 +55,13 @@ $ su
 ```
 
 As you notice I change the url and download the 14.2 branch
-but you can use the next url:
+but you can use the Skaendo url:
 
 ```bash
 git clone https://gitlab.com/skaendo/csb-extras/tree/14.2 
 ```
 
-and follow the next stops, but you want to read the advices from Skaendo
+and follow the next steps, but you want to read the advices from Skaendo
 and Willy Studiarto Raharjo. Because you have to download and install your
 correct version.
 
