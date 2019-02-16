@@ -6,11 +6,12 @@ sudo apt-get -y install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 git clone https://github.com/CesarTavo/My-Slackware.git
-cd My-Slackware 
 
-cat My-Slackware/.vimrc > ~/.vimrc
-cat My-Slackware/.zshrc > ~/.zshrc
-cp My-Slackware/.oh-my-zsh/themes/tavzero.zsh-theme > ~/.oh-my-zsg/themes/tavzero.zsh-theme
+cat .vimrc > ~/.vimrc
+cat .zshrc > ~/.zshrc
+cp .oh-my-zsh/themes/tavzero.zsh-theme > ~/.oh-my-zsg/themes/tavzero.zsh-theme
 
-cd && rm -rf My-Slackware
+cd  && rm -rf My-Slackware
