@@ -17,5 +17,6 @@ cat .zshrc > ~/.zshrc
 cp .oh-my-zsh/themes/tavzero.zsh-theme  ~/.oh-my-zsh/themes/tavzero.zsh-theme
 
 sudo chsh -s $(which zsh)
+# echo "exec zsh" ~/.bashrc
 
 cd  && rm -rf My-Slackware
