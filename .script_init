@@ -12,6 +12,6 @@ git clone https://github.com/CesarTavo/My-Slackware.git
 
 cat .vimrc > ~/.vimrc
 cat .zshrc > ~/.zshrc
-cp .oh-my-zsh/themes/tavzero.zsh-theme > ~/.oh-my-zsg/themes/tavzero.zsh-theme
+cp .oh-my-zsh/themes/tavzero.zsh-theme > ~/.oh-my-zsh/themes/tavzero.zsh-theme
 
 cd  && rm -rf My-Slackware
