@@ -43,7 +43,7 @@ Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.vim/.fzf', 'do': './install --no-bash --all' }
 
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
@@ -57,3 +57,22 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" Highlight the 80-Column 
+highlight ColorColumn ctermbg=darkmagenta
+set colorcolumn=80
+
+" let g:go_version_warning = 0
+
+"Filetype
+filetype plugin on
+nmap <F2> :SCCompile<CR>
+nmap <F4> :SCCompileRun<CR>
+nnoremap <F3> :w <CR> :!gcc -o %< % && ./%< <CR>
+
+" Map << to <ESC>
+:imap ;; <Esc>
+:nmap <Space> i
+
+" Autocompletition
+set wildmode=longest,list,full
