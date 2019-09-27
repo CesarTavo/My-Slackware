@@ -3,9 +3,9 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-;;; Copy-right (C) 2018 César Tavo
+;;; Copy-right (C) 2018 @CesarTavo
 ;;; Version: 25.2.2
-;;; Este es mi configuración emacs
+;;; Esta es mi configuración emacs
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;    MANEJADOR DE    ;;;;;
@@ -63,8 +63,8 @@
 ;;;;;    INFORMACION     ;;;;;
 ;;;;;      PERSONAL      ;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq user-full-name "César Gustavo Sánchez de la Rosa")
-(setq user-mail-address "cesartavo@ciencias.unam.mx")
+(setq user-full-name "Somename")
+(setq user-mail-address "someemail@com.com")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;    ELOGIO A LA     ;;;;;
@@ -87,8 +87,8 @@
 ;(add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
 
 ;;Guardar los archidos autoguardados en el directorio 
-(setq backup-directory-alist '(("/home/tavo/.emacs.d/" . "auto-save-list/")))
-(setq auto-saves-dir '(("/home/tavo/.emacs.d/backups/")))
+(setq backup-directory-alist '(("~/.emacs.d/" . "auto-save-list/")))
+(setq auto-saves-dir '(("~/.emacs.d/backups/")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;    VARIABLES       ;;;;;
@@ -146,7 +146,7 @@
  '(ido-vertical-mode t)
  '(ido-vertical-show-count t)
  '(inhibit-startup-screen t)
- '(major-mode-icons-icons-path "/home/tavo/.emacs.d/elpa/")
+ '(major-mode-icons-icons-path "~/.emacs.d/elpa/")
  '(major-mode-icons-icons-style (quote all-the-icons))
  '(mc/always-repeat-command nil)
  '(menu-bar-mode t)
