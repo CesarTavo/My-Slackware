@@ -80,7 +80,7 @@ bureau_git_prompt () {
 }
 
 
-_PATH="%{$fg_bold[red]%}%~%{$reset_color%}"
+_PATH="%{$fg[magenta]%}%~%{$reset_color%}"
 
 if [[ $EUID -eq 0 ]]; then
   _USERNAME="%{$fg_bold[red]%}%n"
@@ -89,7 +89,7 @@ else
   _USERNAME="%{$fg_bold[green]%}%n"
   _LIBERTY="%{$fg[green]%}$"
 fi
-_USERNAME="$_USERNAME%{$reset_color%}@%m"
+_USERNAME="$_USERNAME%{$fg[cyan]%}@%{$reset_color%}%{$fg[cyan]%}%m"
 _LIBERTY="$_LIBERTY%{$reset_color%}"
 
 
