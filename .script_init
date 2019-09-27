@@ -2,6 +2,7 @@
 
 # update
 sudo apt-get -y update
+mkdir ~/.vim && mkdir ~/.zsh && mkdir ~/.vim/bundle
 sudo apt-get -y install python vim-gtk zsh curl
 
 # oh my zsh
@@ -14,11 +15,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 # zsh-syntax-highlighting
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+# Single Compile
+cd ~/.vim/bundle
+git clone git://github.com/xuhdev/SingleCompile.git
 
 
+cd
 git clone https://github.com/CesarTavo/My-Slackware.git
+cd My-Slackware
 
-mkdir .vim && mkdir .zsh
 cat .vimrc > ~/.vimrc
 cat .zshrc > ~/.zshrc
 cp .oh-my-zsh/themes/tavzero.zsh-theme  ~/.zsh/.oh-my-zsh/themes/tavzero.zsh-theme
