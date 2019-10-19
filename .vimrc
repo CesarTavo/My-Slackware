@@ -62,6 +62,11 @@ nmap ga <Plug>(EasyAlign)
 highlight ColorColumn ctermbg=darkmagenta
 set colorcolumn=80
 
+" Automatic wrap line at 80 characters in markdown and LaTeX and SpellCheck es
+au BufRead,BufNewFile *.md,*.tex 
+			\ setlocal textwidth=80 spell spelllang=es
+" au FileType *.md,*.tex setlocal textwidth=80
+
 " let g:go_version_warning = 0
 
 "Filetype
@@ -72,7 +77,14 @@ nnoremap <F3> :w <CR> :!gcc -o %< % && ./%< <CR>
 
 " Map << to <ESC>
 :imap ;; <Esc>
+:nmap <Return> o
 :nmap <Space> i
+:imap jj <Esc>
+" Map SpellCheck command
+" z= change word
+" zg add word
+:map <C-x> z=
+:map <C-a> zg
 
-" Autocompletition
+" Command Line Autocompletition
 set wildmode=longest,list,full
