@@ -7,11 +7,26 @@
 
 " Some basics stuff: 
 
+set mouse=a
+syntax on
+set ignorecase
+set smartcase
 set nocompatible
 set encoding=utf-8
 set number
 set relativenumber
 set backspace=indent,eol,start 
+set termguicolors
+colorscheme codedark
+
+" Set Cursors
+set cursorline
+set cursorcolumn
+highlight CursorLine ctermbg=Yellow cterm=bold guibg=#2b2b2b
+highlight CursorColumn ctermbg=Yellow cterm=bold guibg=#2b2b2b
+
+" Command Line Autocompletition
+set wildmode=longest,list,full
 
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
@@ -48,9 +63,30 @@ Plug 'junegunn/fzf', { 'dir': '~/.vim/.fzf', 'do': './install --no-bash --all' }
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
 
+" Autopairs
+" call AutoPairsToggle() -to disable
+" Plug 'jiangmiao/auto-pairs'
+
+" Ranbow Parentheses
+Plug 'junegunn/rainbow_parentheses.vim'
+
+" Vim-sorrund
+Plug 'tpope/vim-surround'
+
+" Vim-Colorized Colorized hex in css
+Plug 'chrisbra/Colorizer'
+
+" Multiplecursors
+Plug 'terryma/vim-multiple-cursors'
+function! Multiple_cursors_before()
+	call AutoPairsToggle()
+endfun
+function! Multiple_cursors_after()
+	call AutoPairsToggle()
+endfun
+
 " Initialize plugin system
 call plug#end()
-
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -86,5 +122,19 @@ nnoremap <F3> :w <CR> :!gcc -o %< % && ./%< <CR>
 :map <C-x> z=
 :map <C-a> zg
 
-" Command Line Autocompletition
-set wildmode=longest,list,full
+" Rainbow parentheses customization
+" Activation based on file type
+augroup rainbow_lisp
+  autocmd!
+    autocmd FileType java,lisp,clojure,scheme RainbowParentheses
+augroup END
+
+let g:rainbow#max_level = 25
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{','}']]
+
+" ColorHighlight group
+" Activation based on file type
+augroup color_highlight
+  autocmd!
+    autocmd FileType css,html,yaml,bash,zsh ColorHighlight
+augroup END
